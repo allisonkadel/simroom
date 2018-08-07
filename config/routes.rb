@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :equipment
+  resources :equipment do
+    resources :components
+  end
   resources :trainings
   resources :users
   resources :sessions
