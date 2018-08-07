@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
         if @report.save
             redirect_to equipment_reports_path(@report.equipment)
         else
-            render :new
+            redirect_to new_equipment_report_path
         end
     end
     
