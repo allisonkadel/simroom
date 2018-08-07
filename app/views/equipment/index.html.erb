@@ -1,0 +1,7 @@
+<h3> Equipment and Components </h3>
+
+<ul><% @equipment_index.each do |equipment| %>
+    <h4><%= equipment.name %></h4>
+    <h5><%= equipment.type %></h5>
+    <p><%= link_to "See Components", equipment_components_path %></p>
+<% end %>
