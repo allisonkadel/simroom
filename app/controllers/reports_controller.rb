@@ -5,4 +5,9 @@ class ReportsController < ApplicationController
         @reports = @equipment.reports
     end
 
+    def new
+        @equipment = Equipment.find(params[:equipment_id])
+        @report = Report.new
+    end
+    
 end
