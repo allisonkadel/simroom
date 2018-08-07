@@ -9,5 +9,14 @@ class ReportsController < ApplicationController
         @equipment = Equipment.find(params[:equipment_id])
         @report = Report.new
     end
+
+    def create
+        @report = Report.new(:content => params[:report][:content], :equipment_id => params[:equipment_id])
+        if @report.save
+            redirect_to equipment_reports_path(@report.equipment)
+        else
+            render :new
+        end
+    end
     
 end
