@@ -1,4 +1,6 @@
 <h3> New Report for <%= @equipment.name %> </h3>
+<%= link_to "Back to Equipment List", equipment_index_path %>
+<%= link_to "Back to Dashboard", user_path(current_user) %>
 
 <%= form_for @report, :url => equipment_reports_path do |f| %>
     <%= f.label :content %>
