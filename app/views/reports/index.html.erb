@@ -1,0 +1,11 @@
+<h3> Reports for <%= @equipment.name %> </h3>
+
+<ul> <% @reports.each do |report| %>
+    <fieldset>
+    <legend> <%= report.created_at %> </legend>
+    <p>
+     <%= report.content %>
+    </p>
+</fieldset>
+    <% end %>
+</ul>

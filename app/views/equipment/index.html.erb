@@ -2,7 +2,5 @@
 
 <ul><% @equipment_index.each do |equipment| %>
     <h4> <%= equipment.name %> </h4>
-    <%= link_to "See Report", equipment_path(equipment) %>
-    <br>
-    <%= link_to "See Components", equipment_components_path(equipment) %>
+    <%= link_to "See Reports", equipment_reports_path(equipment) %>
 <% end %>

@@ -5,6 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-equipment_index = Equipment.create([{name: 'rick'}, {name: 'defib1'}])
-components = Component.create([{name: 'filange', equipment: Equipment.first},
-                                name: 'pressure sensor', equipment: Equipment.last])
+
