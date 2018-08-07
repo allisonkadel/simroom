@@ -1,0 +1,7 @@
+<h3> New Report for <%= @equipment.name %> </h3>
+
+<%= form_for @report, :url => equipment_reports_path do |f| %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.submit "Submit Report" %>
+<% end %>
