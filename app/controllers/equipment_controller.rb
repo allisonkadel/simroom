@@ -16,4 +16,13 @@ class EquipmentController < ApplicationController
             render :new
         end
     end
+
+    private
+
+        def equipment_params
+            params.require(:equipment).permit(
+                :name,
+                :reports_attributes => [:id, :content]
+            )
+        end
 end
