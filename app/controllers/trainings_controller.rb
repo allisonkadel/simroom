@@ -27,11 +27,15 @@ class TrainingsController < ApplicationController
 
     def update
         @training = Training.find(params[:id])
+        #consider wrapping the below conditional in a method
         if @training.user_id == current_user.id
-        if @training.update(training_params)
-            redirect_to training_path(@training)
+            if @training.update(training_params)
+                redirect_to training_path(@training)
+            else
+                render :edit
+            end
         else
-            render :edit
+            redirect_to training_path(@training)
         end
     end
 
