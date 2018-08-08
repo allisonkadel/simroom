@@ -23,6 +23,9 @@ class TrainingsController < ApplicationController
 
     def edit
         @training = Training.find(params[:id])
+        if @training.user_id != current_user.id
+            redirect_to training_path(@training)
+        end
     end
 
     def update
