@@ -4,4 +4,8 @@ class TrainingsController < ApplicationController
         @trainings = Training.all
     end
 
+    def new
+        @training = Training.new
+    end
+
 end
