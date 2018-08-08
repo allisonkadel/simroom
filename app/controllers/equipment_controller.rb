@@ -9,6 +9,11 @@ class EquipmentController < ApplicationController
     end
 
     def create
-        raise params.inspect
+        @equipment = Equipment.new(equipment_params)
+        if @equipment.save
+            redirect_to equipment_reports_path(@equipment)
+        else
+            render :new
+        end
     end
 end
