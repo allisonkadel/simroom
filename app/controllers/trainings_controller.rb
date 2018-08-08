@@ -43,7 +43,6 @@ class TrainingsController < ApplicationController
     end
 
     def destroy
-        raise params.inspect
         @training = Training.find(params[:id])
         @training.destroy if @training.user_id == current_user.id
         redirect_to trainings_path
