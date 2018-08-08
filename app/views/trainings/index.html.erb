@@ -1,0 +1,27 @@
+<h3> Currently Scheduled Trainings </h3>
+<%= link_to "Create New Training", new_training_path(@training) %>
+<br>
+<%= link_to "Back to Dashboard", user_path(current_user) %>
+ <ul> <% @trainings.each do |training| %>
+    <fieldset>
+    <legend> <%= training.created_at %> </legend>
+    <p>
+     <%= "Name: #{training.name}" %>
+    </p>
+    <p>
+    <%= "Description: #{training.description}" %>
+    </p>
+    <p>
+    <%= "Room: #{training.simroom}" %>
+    </p>
+    <p>
+    <%= "Date: #{training.date}" %>
+    </p>
+    <p>
+    Equipment: <%= link_to training.equipment.name, equipment_reports_path(training.equipment) %>
+    </p>
+    <p>
+    <%= "Created by: #{training.user.email}" %>
+    </p>
+    </fieldset>
+<% end %> </ul>
