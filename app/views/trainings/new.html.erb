@@ -10,10 +10,10 @@
     <%= f.label :simroom %>
     <%= f.text_field :simroom %>
 
-    <%= f.fields_for :equipment do |equipment_f| %>
-        <%= equipment_f.label :equipment %>
-        <%= equipment_f.collection_select(:equipment_id, Equipment.all, :id, :name) %>
-    <% end %>
+    <%= f.label :equipment %>
+    <%= f.collection_select(:equipment_id, Equipment.all, :id, :name) %>
+
+    <%= f.hidden_field(:user_id, :value => current_user.id) %>
 
     <%= f.submit "Schedule Training" %>
 <% end %>
