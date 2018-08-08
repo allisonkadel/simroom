@@ -3,5 +3,7 @@ class Equipment < ApplicationRecord
     has_many :users, :through => :trainings
     has_many :reports
 
+    accepts_nested_attributes_for :reports
+
     validates :name, :uniqueness => true
 end

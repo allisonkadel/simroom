@@ -5,5 +5,10 @@ class EquipmentController < ApplicationController
 
     def new
         @equipment = Equipment.new
+        @equipment.reports.build
+    end
+
+    def create
+        raise params.inspect
     end
 end
