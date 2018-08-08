@@ -1,0 +1,15 @@
+<h3> Create a Training </h3>
+
+<%= form_for @training do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <%= f.label :date_of_training %>
+    <%= f.date_field :date %>
+    <%= f.label :simroom %>
+    <%= f.text_field :simroom %>
+    <%= f.submit "Schedule Training" %>
+<% end %>
+
+    
