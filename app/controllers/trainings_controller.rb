@@ -17,4 +17,17 @@ class TrainingsController < ApplicationController
         end
     end
 
+    private
+
+        def training_params
+            params.require(:training).permit(
+                :name,
+                :description,
+                :date,
+                :simroom,
+                :equipment_id,
+                :user_id
+            )
+        end
+
 end
