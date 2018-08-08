@@ -6,7 +6,7 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
     <%= f.label :date_of_training %>
-    <%= f.date_field :date %>
+    <%= f.date_field :date, min: Date.tomorrow %>
     <%= f.label :simroom %>
     <%= f.text_field :simroom %>
 
