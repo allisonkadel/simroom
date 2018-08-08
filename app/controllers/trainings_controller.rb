@@ -21,6 +21,10 @@ class TrainingsController < ApplicationController
         @training = Training.find(params[:id])
     end
 
+    def edit
+        @training = Training.find(params[:id])
+    end
+
     private
 
         def training_params
