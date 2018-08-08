@@ -4,7 +4,7 @@
 <%= link_to "Back to Dashboard", user_path(current_user) %>
  <ul> <% @trainings.each do |training| %>
     <fieldset>
-    <legend> <%= training.name %> </legend>
+    <legend> <%= link_to training.name, training_path(training) %> </legend>
     <p>
     <%= "Description: #{training.description}" %>
     </p>
