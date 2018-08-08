@@ -9,6 +9,12 @@
     <%= f.date_field :date %>
     <%= f.label :simroom %>
     <%= f.text_field :simroom %>
+
+    <%= f.fields_for :equipment do |equipment_f| %>
+        <%= equipment_f.label :equipment %>
+        <%= equipment_f.collection_select(:equipment_id, Equipment.all, :id, :name) %>
+    <% end %>
+
     <%= f.submit "Schedule Training" %>
 <% end %>
 
