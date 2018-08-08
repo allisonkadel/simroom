@@ -16,3 +16,6 @@ Equipment: <%= link_to @training.equipment.name, equipment_reports_path(@trainin
 <%= "Created by: #{@training.user.email}" %>
 </p>
 </fieldset>
+
+<%= link_to "Edit Training", edit_training_path if current_user.id == @training.user_id %>
+<!--consider wrapping this in a helper method-->
