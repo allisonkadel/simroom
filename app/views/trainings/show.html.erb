@@ -20,4 +20,7 @@ Equipment: <%= link_to @training.equipment.name, equipment_reports_path(@trainin
 <%= link_to "Edit Training", edit_training_path if current_user.id == @training.user_id %><br>
 <!--consider wrapping this in a helper method-->
 
+<%= button_to "Cancel Training", {action: "destroy", id: @training.id},
+method: :delete if current_user.id == @training.user_id %>
+
 <%= link_to "Back to Trainings", trainings_path %>
