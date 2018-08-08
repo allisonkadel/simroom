@@ -5,5 +5,6 @@ class Equipment < ApplicationRecord
 
     accepts_nested_attributes_for :reports
 
+    validates :name, :presence => true
     validates :name, :uniqueness => true
 end
