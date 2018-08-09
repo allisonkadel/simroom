@@ -15,7 +15,8 @@ class ReportsController < ApplicationController
         if @report.save
             redirect_to equipment_reports_path(@report.equipment)
         else
-            redirect_to new_equipment_report_path
+            @equipment = Equipment.find(params[:equipment_id])
+            render :new
         end
     end
     
