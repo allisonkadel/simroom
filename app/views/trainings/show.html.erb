@@ -1,25 +1,23 @@
 <fieldset>
 <legend> <%= @training.name %> </legend>
 <p>
-<%= "Description: #{@training.description}" %>
+    <%= "Description: #{@training.description}" %>
 </p>
 <p>
-<%= "Room: #{@training.simroom}" %>
+    <%= "Room: #{@training.simroom}" %>
 </p>
 <p>
-<%= "Date: #{@training.date}" %>
+    <%= "Date: #{@training.date}" %>
 </p>
 <p>
-Equipment: <%= link_to @training.equipment.name, equipment_reports_path(@training.equipment) %>
+    Equipment: <%= link_to @training.equipment.name, equipment_reports_path(@training.equipment) %>
 </p>
 <p>
 <%= "Created by: #{@training.user.email}" %>
 </p>
 </fieldset>
 
-<%= button_to "Edit Training", edit_training_path, method: :get if current_user.id == @training.user_id %>
-
-<%= button_to "Cancel Training", {action: "destroy", id: @training.id},
-method: :delete if current_user.id == @training.user_id %>
+<%= admin_edit_button %>
+<%= admin_cancel_button %>
 
 <%= link_to "Back to Trainings", trainings_path %>
