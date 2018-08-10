@@ -4,8 +4,6 @@ class SessionsController < ApplicationController
         @user = User.new
     end
 
-    #how to log out of github?
-
     def create
         if auth_hash = request.env["omniauth.auth"]
             @user = User.find_or_create_by_omniauth(auth_hash)
@@ -24,7 +22,6 @@ class SessionsController < ApplicationController
 
     def destroy
         session.clear
-        #request.env["omniauth.auth"].clear unless !request.env["omniauth.auth"]
         redirect_to root_path
     end
 
