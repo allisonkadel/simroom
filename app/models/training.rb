@@ -8,7 +8,5 @@ class Training < ApplicationRecord
     validates :date, :presence => true
     validates :simroom, :presence => true
 
-    # add AR scope method ------ need to convert date to epoch time to compare!!!
-    scope :past_trainings, -> { where("date < ?", DateTime.now.to_time.to_i
-    )}
+    scope :past_trainings, -> { where("date < ?", Date.yesterday) }
 end
