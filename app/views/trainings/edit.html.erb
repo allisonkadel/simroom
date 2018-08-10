@@ -4,23 +4,23 @@
 <legend> <%= @training.name %> </legend>
 <%= form_for @training do |f| %>
     <p>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
     </p>
     <p>
-    <%= f.label :room %>
-    <%= f.text_field :simroom %>
+        <%= f.label :room %>
+        <%= f.text_field :simroom %>
     </p>
     <p>
-    <%= f.label :training_date %>
-    <%= f.date_field :date %>
+        <%= f.label :training_date %>
+        <%= f.date_field :date %>
     </p>
     <p>
-    <%= f.label :equipment %>
-    <%= f.collection_select(:equipment_id, Equipment.all, :id, :name) %>
+        <%= f.label :equipment %>
+        <%= f.collection_select(:equipment_id, Equipment.all, :id, :name) %>
     </p>
     <p>
-    <%= "Created by: #{@training.user.email}" %>
+        <%= "Created by: #{@training.user.email}" %>
     </p>
     <%= f.submit "Update Training" %>
 <% end %>
