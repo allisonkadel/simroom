@@ -48,6 +48,10 @@ class TrainingsController < ApplicationController
         redirect_to trainings_path
     end
 
+    def filter
+        @future_trainings = Training.future_trainings
+    end
+
     private
 
         def training_params
