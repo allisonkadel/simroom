@@ -1,27 +1,5 @@
-<h3> Currently Scheduled Trainings </h3>
-<%= link_to "Create New Training", new_training_path(@training) %>
-<br>
-<%= link_to "Back to Dashboard", user_path(current_user) %>
- <ul> <% @trainings.each do |training| %>
-    <fieldset>
-    <legend> <%= link_to training.name, training_path(training) %> </legend>
-    <p>
-    <%= "Description: #{training.description}" %>
-    </p>
-    <p>
-    <%= "Room: #{training.simroom}" %>
-    </p>
-    <p>
-    <%= "Date: #{training.date}" %>
-    </p>
-    <p>
-    Equipment: <%= link_to training.equipment.name, equipment_reports_path(training.equipment) %>
-    </p>
-    <p>
-    <%= "Created by: #{training.user.email}" %>
-    </p>
-    </fieldset>
-<% end %> </ul>
+<h3> Currently Scheduled and Past Trainings </h3>
+<%= link_to "See Only Upcoming Trainings", '/trainings/upcoming' %><br>
+<%= link_to "Create New Training", new_training_path(@training) %><br>
 
-
-<!--consider making this a partial and rendering here and training show page-->
+<%= render :partial => "list", :locals => {:trainings => @trainings} %>
