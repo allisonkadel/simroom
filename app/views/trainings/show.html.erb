@@ -17,8 +17,7 @@ Equipment: <%= link_to @training.equipment.name, equipment_reports_path(@trainin
 </p>
 </fieldset>
 
-<%= link_to "Edit Training", edit_training_path if current_user.id == @training.user_id %><br>
-<!--consider wrapping this in a helper method-->
+<%= button_to "Edit Training", edit_training_path, method: :get if current_user.id == @training.user_id %>
 
 <%= button_to "Cancel Training", {action: "destroy", id: @training.id},
 method: :delete if current_user.id == @training.user_id %>
