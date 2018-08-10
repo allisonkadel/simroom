@@ -24,7 +24,7 @@ When you start a local server, you will be directed to the home page, where you 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/allisonkadel/biorhythms.git.
+Bug reports and pull requests are welcome on GitHub at https://github.com/allisonkadel/simroom.git.
 
 ## License
 
