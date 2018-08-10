@@ -1,24 +1,31 @@
-# README
+# Simroom
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Simroom. This gem is intended to manage inventory and trainings for a simulation center. Use it to view and create simulation equipment reports and to schedule simulation trainings for staff.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Add this line to your application's Gemfile:
 
-* System dependencies
+```ruby
+gem 'simroom'
+```
 
-* Configuration
+And then execute:
 
-* Database creation
+    $ bundle
 
-* Database initialization
+Or install it yourself as:
 
-* How to run the test suite
+    $ gem install simroom
 
-* Services (job queues, cache servers, search engines, etc.)
+## Usage
 
-* Deployment instructions
+When you start a local server, you will be directed to the home page, where you will be prompted to either login or create an account.
 
-* ...
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/allisonkadel/biorhythms.git.
+
+## License
+
+[MIT License](https://github.com/allisonkadel/simroom/blob/master/LICENSE.md)
