@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :equipment do
     resources :reports
   end
+  get '/trainings/upcoming', to: 'trainings#filter'
   resources :trainings
   resources :users
   resources :sessions
