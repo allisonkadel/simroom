@@ -26,6 +26,6 @@ When you start a local server, you will be directed to the home page, where you 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/allisonkadel/simroom.git.
 
-## License
+## Licensing
 
-[MIT License](https://github.com/allisonkadel/simroom/blob/master/LICENSE.md)
+[This project has been licensed under the MIT open source license.](https://github.com/allisonkadel/simroom/blob/master/LICENSE.md)
