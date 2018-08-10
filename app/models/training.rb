@@ -8,5 +8,5 @@ class Training < ApplicationRecord
     validates :date, :presence => true
     validates :simroom, :presence => true
 
-    scope :past_trainings, -> { where("date < ?", Date.yesterday) }
+    scope :future_trainings, -> { where("date > ?", Date.yesterday) }
 end
