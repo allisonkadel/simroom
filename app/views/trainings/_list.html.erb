@@ -2,20 +2,8 @@
  <ul> <% trainings.each do |training| %>
     <fieldset>
     <legend> <%= link_to training.name, training_path(training) %> </legend>
-    <p>
-    <%= "Description: #{training.description}" %>
-    </p>
-    <p>
-    <%= "Room: #{training.simroom}" %>
-    </p>
-    <p>
-    <%= "Date: #{training.date}" %>
-    </p>
-    <p>
-    Equipment: <%= link_to training.equipment.name, equipment_reports_path(training.equipment) %>
-    </p>
-    <p>
-    <%= "Created by: #{training.user.email}" %>
-    </p>
+
+    <%= render :partial => "attributes", :locals => {:training => training} %>
+
     </fieldset>
 <% end %> </ul>
