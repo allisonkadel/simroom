@@ -1,17 +1,8 @@
 <h3> Create a Training </h3>
 
-<%= form_for @training do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-    <%= f.label :date_of_training %>
-    <%= f.date_field :date, min: Date.tomorrow %>
-    <%= f.label :simroom %>
-    <%= f.text_field :simroom %>
+<%= form_for @training do |f| %> 
 
-    <%= f.label :equipment %>
-    <%= f.collection_select(:equipment_id, Equipment.all, :id, :name) %>
+    <%= render :partial => "form_attributes", :locals => {:f => f} %>
 
     <%= f.hidden_field(:user_id, :value => current_user.id) %>
 
