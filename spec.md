@@ -23,9 +23,9 @@ Specs:
 - [X] Include third party signup/login (how e.g. Devise/OmniAuth)
   omniauth-github
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
-  URL: equipment/2/reports
+  URL: equipment/1/reports
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-  URLS: equipment/2/reports/new, equipment/new
+  URLS: equipment/1/reports/new, equipment/new
 - [X] Include form display of validation errors (form URL e.g. /recipes/new)
   URLS: users/new, reports/new
 Confirm:
